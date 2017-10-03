@@ -1,0 +1,6 @@
+<%= form_for @user_challenge do |f|%>
+Username to Add: <%= f.collection_select :user_id, User.all, :id, :name%> <br>
+Challenges: <%= f.collection_select :challenge_id, Challenge.all, :id, :description%> <br>
+<%= f.submit "Add Users to Challenge" %>
+<% end %><br>
+<%= link_to "Back to Home", "/home" %>

@@ -2,3 +2,9 @@
 <p>Bio: <%= @user.bio %> </p>
 <p>Experience Points: <%= @user.EXP %> </p>
  <p>Favorite Food: <%= @user.favorite_food %> </p>
+
+ <% @user.reviews.each do |review|%>
+<%= link_to "#{review.restaurant.name} Review", "/reviews/#{review.id}" %>
+<%end%><br>
+
+<%= link_to "Back to Home", "/home" %>

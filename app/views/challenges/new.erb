@@ -1,0 +1,8 @@
+<%= form_for @challenge do |f|%>
+Start: <%= f.date_field :start %><br>
+End: <%= f.date_field :end %><br>
+Challenge Description: <%= f.text_area :description %><br>
+Reward: <%= f.number_field :reward %> EXP<br>
+<%= f.submit "Create Challenge" %>
+<% end %><br>
+<%= link_to "Back to Home", "/home" %>

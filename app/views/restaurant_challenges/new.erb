@@ -1,0 +1,6 @@
+<%= form_for @restaurant_challenge do |f|%>
+Restaurant: <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name%> <br>
+Restaurant: <%= f.collection_select :challenge_id, Challenge.all, :id, :description%> <br>
+<%= f.submit "Add Restaurants to Challenge" %>
+<% end %><br>
+<%= link_to "Back to Home", "/home" %>

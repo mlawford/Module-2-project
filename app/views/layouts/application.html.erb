@@ -11,4 +11,6 @@
   <body>
     <%= yield %>
   </body>
+  <%= button_to "Logout", {:controller => :application,
+        :action => 'logout'}, :method => :post %>
 </html>
