@@ -8,17 +8,28 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session.delete :id
-      session[:user_id] = @user.id
+
+      session[:id] = @user.id
        redirect_to '/home'
      else
-       redirect_to '/user/new'
-    end
+       render :new
+     end
   end
 
   def show
     @user = User.find(params[:id])
     @reviews = @user.reviews
+  end
+
+  def join_challenge
+    @user = User.find(session[:id])
+    @current_challenge = Challenge.last
+    if @current_challenge.users.include?(@user)
+      redirect_to '/home'
+    else
+      UserChallenge.create(:user_id => @user.id, :challenge_id => @current_challenge.id)
+      redirect_to '/home'
+    end
   end
 
 

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def log_user_in
     @user = User.find_by(name: params[:name])
     if @user.authenticate(params[:password])
-        session[:user_id] = @user.id
+        session[:id] = @user.id
         redirect_to '/home'
     else
       redirect_to '/login'
@@ -20,7 +20,11 @@ class ApplicationController < ActionController::Base
   end
 
   def home
-    @user = User.find(session[:user_id])
+    @top_users = User.all.sort_by{|user| user.EXP}.reverse.take(3)
+
+    @users = Challenge.last.users.sort_by{|user| user.reviews.length}.reverse
+
+    @user = User.find(session[:id])
 
   end
 

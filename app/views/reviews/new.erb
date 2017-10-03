@@ -1,6 +1,14 @@
+<% if @review.errors.any? %>
+<h2> Error: </h2>
+<% @review.errors.full_messages.each do |msg| %>
+<%= msg %>
+<%end%>
+<%end%>
+
 <%= form_for @review do |f|%>
 
 Restaurant: <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name%> <br>
 Content: <%= f.text_area :content %>
 <%= f.submit "Add Review" %>
-<% end %>
+<% end %><br>
+<%= link_to "Back to Home", "/home" %>

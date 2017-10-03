@@ -9,10 +9,13 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.user = User.find(session[:user_id])
-    @review.save
-
-    redirect_to review_path(@review)
+    @review.user = User.find(session[:id])
+    if @review.valid?
+      @review.save
+      redirect_to review_path(@review)
+    else
+      render :new
+    end
   end
 
   def show
