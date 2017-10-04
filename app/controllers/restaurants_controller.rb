@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+require 'yelp'
 
   def index
     @restaurants = Restaurant.all

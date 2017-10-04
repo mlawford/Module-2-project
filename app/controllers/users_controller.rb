@@ -13,7 +13,7 @@ class UsersController < ApplicationController
        redirect_to '/home'
      else
        render :new
-     end
+    end
   end
 
   def show

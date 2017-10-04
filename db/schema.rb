@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20171003132652) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "bio"
-    t.integer "EXP", default: 0
+    t.integer "EXP"
     t.string "favorite_food"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
