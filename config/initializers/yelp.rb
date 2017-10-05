@@ -6,6 +6,7 @@
 # end
 
 require "json"
+# require "resolv"
 require "http"
 require "optparse"
 
@@ -23,7 +24,7 @@ GRANT_TYPE = "client_credentials"
 DEFAULT_BUSINESS_ID = "yelp-new-york"
 DEFAULT_TERM = "dinner"
 DEFAULT_LOCATION = "New York, NY"
-SEARCH_LIMIT = 5
+SEARCH_LIMIT = 50
 
 def bearer_token
   # Put the url together

@@ -1,4 +1,5 @@
 class RestaurantChallengesController < ApplicationController
+  require 'yelp'
 
   def new
     @restaurant_challenge = RestaurantChallenge.new
