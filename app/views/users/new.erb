@@ -7,6 +7,7 @@
 
 <%= form_for @user do |f|%>
 Username: <%= f.text_field :name %><br>
+Email address: <%=f.text_field :email %><br>
 Bio: <%= f.text_area :bio %> <br>
 Favorite Food: <%= f.text_field :favorite_food %><br>
 Password: <%= f.password_field :password %><br>

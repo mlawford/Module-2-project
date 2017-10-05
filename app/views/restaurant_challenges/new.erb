@@ -1,11 +1,9 @@
 <%= form_for @restaurant_challenge do |f| %>
 Restaurants: <% search('restaurant','New York City')["businesses"].sample(5).map do |restaurant| %>
-    <%= restaurant["name"]%>
-  <%end%>
-<!-- Restaurant: <%# f.collection_select :restaurant_id, Restaurant.all, :id, :name%> <br> -->
+    <%= restaurant["name"]%> /
+  <%end%><br>
+
 Challenge: <%= f.collection_select :challenge_id, Challenge.all, :id, :description%> <br><br>
 <%= f.submit "Add Restaurants to Challenge" %><br><br>
 <%= link_to "Back to Home", "/home" %>
 <%end%>
-
-<!-- search('restaurant','New York City')["businesses"].sample(5).map{|r| r["name"]} -->

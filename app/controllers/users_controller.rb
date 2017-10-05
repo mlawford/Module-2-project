@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
       session[:id] = @user.id
        redirect_to '/home'
+      UserMailer.welcome_email(@user).deliver_now
      else
        render :new
     end

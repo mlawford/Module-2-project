@@ -6,7 +6,7 @@ class Challenge < ApplicationRecord
 
   def end_challenge
     # check timer
-    if timer = false
+    if timer == false || fetch_reviews == 5
     #tally user reviews for the week
     find_winner
     #dsitribute points to winner

@@ -11,6 +11,7 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.create(challenge_params)
     redirect_to challenge_path(@challenge)
+    UserMailer.challenge_notification(@user).deliver_now
   end
 
   def show
