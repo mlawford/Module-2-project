@@ -42,6 +42,6 @@ class ApplicationController < ActionController::Base
     unless session[:id] == nil
       session.delete :id
     end
-      redirect_to '/login'
+      redirect_to '/'
   end
 end

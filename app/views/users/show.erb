@@ -1,5 +1,5 @@
 
-<div class="gallery2">
+<div class="gallery2 animated fadeIn">
   <div class="profile-card">
     <a target="_self" href="#>">
       <img src="/profile.png" alt="Fjords" width="500" height="500">
@@ -11,7 +11,7 @@
   </div>
 </div>
 <% if @user.reviews.first %>
-<div class="gallery3">
+<div class="gallery3 animated fadeIn">
   <div class="profile-card">
     <a target="_self" href="/reviews/<%=@user.reviews.first.id %>">
       <img src="/knife.png" alt="Fjords" width="250" height="250">
@@ -21,7 +21,7 @@
 </div>
 <%end%>
 <% if @user.reviews.second %>
-<div class="gallery3">
+<div class="gallery3 animated fadeIn">
   <div class="profile-card">
     <a target="_self" href="/reviews/<%=@user.reviews.second.id %>">
       <img src="/knife.png" alt="Fjords" width="250" height="250">
@@ -32,7 +32,7 @@
 <%end%>
 
 <% if @user.reviews.third %>
-<div class="gallery3">
+<div class="gallery3 animated fadeIn">
   <div class="profile-card">
     <a target="_self" href="/reviews/<%=@user.reviews.third.id %>">
       <img src="/knife.png" alt="Fjords" width="250" height="250">

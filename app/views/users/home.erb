@@ -1,6 +1,6 @@
 <div class="parallax2">
 
-  <div class="newspaper">
+  <div class="newspaper animated fadeIn">
 <% if Challenge.all.length > 0%>
 <div class="box" style= "text-align:center;">This Week's Challenge: </div>
 
@@ -62,11 +62,11 @@ var x = setInterval(function() {
   <%end%>
 
 </div>
-<p class="box" style= "text-align:center;"><font color="white">
+<p class="box animated fadeInUpBig" style= "text-align:center;"><font color="white">
     Weekly Top 3:
 <% @users.each do |user| %>
 
-<div class="gallery4">
+<div class="gallery4 animated fadeInUpBig">
   <a target="_self" href="/users/<%=user.id %>">
     <img src="profile.png" alt="Fjords" width="300" height="200">
   </a>
