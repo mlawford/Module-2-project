@@ -1,10 +1,43 @@
-<h1> <%= @user.name %> </h1>
-<p>Bio: <%= @user.bio %> </p>
-<p>Experience Points: <%= @user.EXP %> </p>
- <p>Favorite Food: <%= @user.favorite_food %> </p>
 
- <% @user.reviews.each do |review|%>
-<%= link_to "#{review.restaurant.name} Review", "/reviews/#{review.id}" %>
-<%end%><br>
+<div class="gallery2">
+  <div class="profile-card">
+    <a target="_self" href="#>">
+      <img src="/profile.png" alt="Fjords" width="500" height="500">
+    </a>
+    <div class="desc"><%=@user.name%></div>
+    <div class="desc">Bio: <%=@user.bio%></div>
+    <div class="desc">Experience Points: <%=@user.EXP%></div>
+    <div class="desc">Favorite Food: <%= @user.favorite_food%></div>
+  </div>
+</div>
+<% if @user.reviews.first %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@user.reviews.first.id %>">
+      <img src="/knife.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@user.reviews.first.restaurant.name%> Review</div>
+  </div>
+</div>
+<%end%>
+<% if @user.reviews.second %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@user.reviews.second.id %>">
+      <img src="/knife.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@user.reviews.second.restaurant.name%> Review</div>
+  </div>
+</div>
+<%end%>
 
-<%= link_to "Back to Home", "/home" %>
+<% if @user.reviews.third %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@user.reviews.third.id %>">
+      <img src="/knife.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@user.reviews.third.restaurant.name%> Review</div>
+  </div>
+</div>
+<%end%>

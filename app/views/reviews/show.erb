@@ -1,5 +1,22 @@
-<h1>Review</h1>
-<h2> <%= @review.restaurant.name %> </h2>
-<p><%= @review.content %> </p><br>
-By <%= @review.user.name %><br>
-<%= link_to "Back to Home", "/home" %>
+
+
+
+<div class="gallery2">
+  <div class="profile-card">
+    <a target="_self" href="/restaurants/<%=@review.restaurant.id%>">
+      <img src="/knife.png" alt="Fjords" width="500" height="500">
+    </a>
+    <div class="desc">Restaurant: <%=@review.restaurant.name%></div>
+  </div>
+</div>
+
+<div class="gallery2">
+  <div class="profile-card">
+    <a target="_self" href="/users/<%=@review.user.id%>">
+      <img src="/profile.png" alt="Fjords" width="500" height="500">
+    </a>
+    <div class="desc">Reviewer: <%=@review.user.name%></div>
+    <div class="desc">Review: <%=@review.content%></div>
+
+  </div>
+</div>

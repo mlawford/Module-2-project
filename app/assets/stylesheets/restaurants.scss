@@ -1,3 +1,80 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.gallery {
+    margin: 5px;
+    float: left;
+    width: 450px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+}
+
+div.gallery:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+div.gallery2 {
+    margin: 25px;
+    float: left;
+    width: 500px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+div.gallery2:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery2 img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc2 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+div.gallery3 {
+    margin: 25px;
+    float: left;
+    width: 250px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+div.gallery3:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery3 img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc3 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}

@@ -1,7 +1,11 @@
-<% @restaurants.each do |r| %><br>
 
-<h1/><%= r.name %></h1>
-<h3><%= r.cuisine %></h3>
+<% @restaurants.each do |restaurant| %>
 
-<%end%><br>
-<%= link_to "Back to Home", "/home" %>
+<div class="gallery animated fadeIn">
+  <a target="_self" href="/restaurants/<%=restaurant.id %>">
+    <img src="knife.png" alt="Fjords" width="300" height="200">
+  </a>
+  <div class="desc"><%="#{restaurant.name}"%></div>
+</div>
+
+<% end %>

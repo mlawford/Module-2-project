@@ -13,3 +13,174 @@
  *= require_tree .
  *= require_self
  */
+
+ /*html,
+ body,
+ .view {
+     height: 100%;
+ }
+
+ .view {
+     background: url("https://mdbootstrap.com/images/regular/city/img%20(17).jpg")no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+ }*/
+
+
+/*parallax BG */
+
+ body, html {
+     height: 100%;
+ }
+
+ .fadeInDown{
+   position: relative;
+   right: 260px;
+   top: 50px;
+ }
+ .navbar-nav > li > a {padding-top:1px !important; padding-bottom:1px !important;}
+
+  .navbar {min-height:80px !important}
+
+  .navbar-brand {
+    color: #f4511e;
+
+}
+
+.form-brand {
+  color: #f4511e;
+
+}
+
+.form-class {
+  width: 45%;
+  border: none;
+  border-color: white;
+  border-radius: 4px
+}
+
+
+
+ .parallax {
+     /* The image used */
+     background-image: url("https://media.giphy.com/media/5XLPWTWfj7h6M/giphy.gif");
+     /* https://media.giphy.com/media/5XLPWTWfj7h6M/giphy.gif */
+      /*https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif*/
+
+     /* Full height */
+     height: 100%;
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ /*parallax BG */
+
+  /*sign up button BG */
+
+  .button_two {
+    background-color: #4CAF50; /* Green */
+    border-radius: 4px;
+    border: none;
+    color: white;
+    right: -475px;
+    top: 450px;
+    padding: 52px;
+    width: 400px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 38px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button_alt {
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  border: none;
+  color: white;
+  right: -225px;
+  top: 450px;
+  padding: 52px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 38px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button3 {
+    background-color: #f4511e;
+    color: white;
+}
+
+.button3:hover {
+    background-color: orange;
+    color: white;
+}
+
+
+.img{
+  position: relative;
+  display: inline-block;
+  right: 260px;
+  top:40px;
+  filter: drop-shadow(0px 0px 10px #FF9922);
+}
+.logo{
+  position: relative;
+  display: inline-block;
+  right: -150px;
+  top:-490px;
+
+  filter: drop-shadow(0px 0px 20px #FF9922);
+}
+
+.imageText {
+  position: relative;
+  display: inline-block;
+  font-size: 38px;
+  color:white;
+  top: 275px;
+  right: 620px;
+ }
+ .leaderboard {
+   position: relative;
+   display: inline-block;
+   font-size: 38px;
+   color:white;
+   background-color: #FF9922;
+  }
+
+ .form-text {
+   position: relative;
+   display: inline-block;
+   font-size: 38px;
+   color:white;
+
+  }
+
+ .imgFooter{
+   position: relative;
+   display: inline-block;
+   right: -45px;
+ }
+
+ .fadeInDown{
+   /*transition: all ease-in-out;*/
+   animation-timing-function: cubic-bezier(.43,.36,.2,.96);
+ }

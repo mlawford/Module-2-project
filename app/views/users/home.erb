@@ -1,0 +1,81 @@
+<div class="parallax2">
+
+  <div class="newspaper">
+<% if Challenge.all.length > 0%>
+<div class="box" style= "text-align:center;">This Week's Challenge: </div>
+
+ <h1 class="form-text" style= "text-align:center;"><font color="white"><%=Challenge.last.description%></font><br>  </h1>
+
+  <h1 class="form-text" style= "text-align:center;"><font color="white">Time Left:</h1>
+  <h1 class="form-text" style= "text-align:center;"><font color="red">
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate =  new Date("<%= Challenge.last.end%>").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+   // Get todays date and time
+   var now = new Date().getTime();
+
+   // Find the distance between now an the count down date
+   var distance = countDownDate - now;
+
+   // Time calculations for days, hours, minutes and seconds
+   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+   // Output the result in an element with id="demo"
+   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+   + minutes + "m " + seconds + "s ";
+
+   // If the count down is over, write some text
+   if (distance < 0) {
+       clearInterval(x);
+       document.getElementById("demo").innerHTML = "EXPIRED";
+   }
+}, 1000);
+</script>
+</h1>
+<%=button_to "Join Challenge", {action: 'join_challenge'},{class: "buttonHome button5"} %>
+<br>
+<br>
+
+
+<br>
+
+<%Challenge.last.restaurants.each do |restaurant|%>
+<a target="_self" href="/restaurants/<%=restaurant.id %>">
+  <p class="box2" style= "text-align:center;"><font color="white"><%=restaurant.name%>
+    <%end%><br>
+
+    <!-- <%= button_to "Join Challenge", {:controller => :users} %> -->
+
+    <!-- <%= button_to "Join Challenge", {:controller => :users,
+          :action => 'join_challenge'}, :method => :post %> -->
+<%else%>
+<h1>NO CHALLENGE FOR THIS WEEK YET</h1>
+  <%end%>
+
+</div>
+<p class="box" style= "text-align:center;"><font color="white">
+    Weekly Top 3:
+<% @users.each do |user| %>
+
+<div class="gallery4">
+  <a target="_self" href="/users/<%=user.id %>">
+    <img src="profile.png" alt="Fjords" width="300" height="200">
+  </a>
+  <div class="desc"><%="#{user.name}"%></div>
+    <div class="desc"><%="#{user.reviews.length}"%> Points</div>
+</div>
+
+<% end %>
+
+
+<br>
+<br>

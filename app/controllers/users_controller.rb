@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
-  # before_action :logged_in
-  # skip_before_action :logged_in, only: [:new]
+  before_action :logged_in
+  skip_before_action :logged_in, only: [:new]
   def new
     @user = User.new
+  end
+
+  def index
+    @users = User.all
   end
 
   def create
@@ -16,6 +20,14 @@ class UsersController < ApplicationController
      end
   end
 
+  def home
+    @top_users = User.all.sort_by{|user| user.EXP}.reverse.take(3)
+
+    @users = Challenge.last.users.sort_by{|user| user.reviews.length}.reverse
+
+    @user = User.find(session[:id])
+
+  end
   def show
     @user = User.find(params[:id])
   end
@@ -41,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   def logged_in
-     return head(:forbidden) unless session.include? :name
+     redirect_to'/' unless session.include? :id
   end
 
 
