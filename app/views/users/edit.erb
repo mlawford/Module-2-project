@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+  <div class="form-text" style="text-align:center";>Error:</div>
+  <% @user.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <%end%>
+<%end%>
+
+<br>
+
+<div class="container-fluid form-class">
+  <%= form_for @user do |f|%>
+  <div class="form-text">Bio: </div> <%= f.text_area :bio, class: 'form-group form-control' %> <br>
+    <div class="form-text">Favorite Food: </div> <%= f.text_field :favorite_food, class: 'form-group form-control' %><br>
+    <%= f.submit class:"btn btn-primary btn-lg"%>
+  <% end %>
+</div>

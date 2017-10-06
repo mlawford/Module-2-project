@@ -1,7 +1,11 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
+    if params[:q].nil? || params[:q] == ""
+      @restaurants = Restaurant.all
+    else
+      @restaurants = Restaurant.where("name LIKE ?", "%#{params[:q]}%")
+    end
   end
 
   def new
@@ -18,10 +22,18 @@ class RestaurantsController < ApplicationController
 
   end
 
+  def search
+    byebug
+  end
+
   private
 
   def restaurant_params
     params.require(:restaurant).permit(:name,:cuisine)
+  end
+
+  def search_params
+    params.permit(:q)
   end
 
 end

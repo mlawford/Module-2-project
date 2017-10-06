@@ -10,34 +10,16 @@
     <div class="desc">Favorite Food: <%= @user.favorite_food%></div>
   </div>
 </div>
-<% if @user.reviews.first %>
+
+<%@user.reviews.each do |review| %>
 <div class="gallery3 animated fadeIn">
   <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@user.reviews.first.id %>">
+    <a target="_self" href="/reviews/<%=review.id%>">
       <img src="/knife.png" alt="Fjords" width="250" height="250">
     </a>
-    <div class="desc"><%=@user.reviews.first.restaurant.name%> Review</div>
-  </div>
-</div>
-<%end%>
-<% if @user.reviews.second %>
-<div class="gallery3 animated fadeIn">
-  <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@user.reviews.second.id %>">
-      <img src="/knife.png" alt="Fjords" width="250" height="250">
-    </a>
-    <div class="desc"><%=@user.reviews.second.restaurant.name%> Review</div>
+    <div class="desc"><%=review.restaurant.name%> Review</div>
   </div>
 </div>
 <%end%>
 
-<% if @user.reviews.third %>
-<div class="gallery3 animated fadeIn">
-  <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@user.reviews.third.id %>">
-      <img src="/knife.png" alt="Fjords" width="250" height="250">
-    </a>
-    <div class="desc"><%=@user.reviews.third.restaurant.name%> Review</div>
-  </div>
-</div>
-<%end%>
+<a href="/users/<%=session[:id]%>/edit"><button class="buttonHome button5">Edit Profile</button></a>

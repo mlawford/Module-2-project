@@ -5,7 +5,7 @@ class RestaurantChallengesController < ApplicationController
   end
 
   def create
-    @restaurant_challenge = RestaurantChallenge.create(restaurant_challenge_params)
+    @restaurant_challenges = RestaurantChallenge.create(restaurant_challenge_params)
     redirect_to '/restaurant_challenges/new'
   end
 

@@ -1,41 +1,22 @@
 
 <div class="gallery2">
   <div class="profile-card">
-    <a target="_self" href="#>">
+    <a target="_blank" href="<%=@restaurant.url%>">
       <img src="/knife.png" alt="Fjords" width="500" height="500">
     </a>
     <div class="desc"><%=@restaurant.name%></div>
-    <div class="desc">Cuisine: <%=@restaurant.cuisine%></div>
   </div>
 </div>
-<% if @restaurant.reviews.first %>
-<div class="gallery3">
-  <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@restaurant.reviews.first.id %>">
-      <img src="/profile.png" alt="Fjords" width="250" height="250">
-    </a>
-    <div class="desc"><%=@restaurant.reviews.first.user.name%> Review</div>
+<% if @restaurant.reviews %>
+  <%@restaurant.reviews.each do |review| %>
+  <div class="gallery3 animated fadeIn">
+    <div class="profile-card">
+      <a target="_self" href="/reviews/<%=review.id%>">
+        <img src="/knife.png" alt="Fjords" width="250" height="250">
+      </a>
+      <div class="desc"><%=review.user.name%>'s Review</div>
+    </div>
   </div>
-</div>
+  <%end%>
 <%end%>
-<% if @restaurant.reviews.second %>
-<div class="gallery3">
-  <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@restaurant.reviews.second.id %>">
-      <img src="/profile.png" alt="Fjords" width="250" height="250">
-    </a>
-    <div class="desc"><%=@restaurant.reviews.second.user.name%> Review</div>
-  </div>
-</div>
-<%end%>
-
-<% if @restaurant.reviews.third %>
-<div class="gallery3">
-  <div class="profile-card">
-    <a target="_self" href="/reviews/<%=@restaurant.reviews.third.id %>">
-      <img src="/profile.png" alt="Fjords" width="250" height="250">
-    </a>
-    <div class="desc"><%=@restaurant.reviews.third.user.name%> Review</div>
-  </div>
-</div>
-<%end%>
+<a href='/reviews/new'><button class="buttonHome button5">Write A Review</button></a>

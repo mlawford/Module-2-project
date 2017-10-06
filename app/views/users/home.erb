@@ -1,7 +1,13 @@
+
+
 <div class="parallax2">
 
   <div class="newspaper animated fadeIn">
 <% if Challenge.all.length > 0%>
+
+
+
+
 <div class="box" style= "text-align:center;">This Week's Challenge: </div>
 
  <h1 class="form-text" style= "text-align:center;"><font color="white"><%=Challenge.last.description%></font><br>  </h1>
@@ -57,24 +63,26 @@ var x = setInterval(function() {
 
     <!-- <%= button_to "Join Challenge", {:controller => :users,
           :action => 'join_challenge'}, :method => :post %> -->
+          </div>
+          <p class="box animated fadeInUpBig" style= "text-align:center;"><font color="white">
+              Weekly Top 3:
+          <% @users.each do |user| %>
+
+          <div class="gallery4 animated fadeInUpBig">
+            <a target="_self" href="/users/<%=user.id %>">
+              <img src="profile.png" alt="Fjords" width="300" height="200">
+            </a>
+            <div class="desc"><%="#{user.name}"%></div>
+              <div class="desc"><%="#{user.reviews.length}"%> Points</div>
+          </div>
+          <%end%>
+
 <%else%>
-<h1>NO CHALLENGE FOR THIS WEEK YET</h1>
+<h1>NO CHALLENGE FOR THIS WEEK YET</h1><br>
   <%end%>
 
-</div>
-<p class="box animated fadeInUpBig" style= "text-align:center;"><font color="white">
-    Weekly Top 3:
-<% @users.each do |user| %>
 
-<div class="gallery4 animated fadeInUpBig">
-  <a target="_self" href="/users/<%=user.id %>">
-    <img src="profile.png" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc"><%="#{user.name}"%></div>
-    <div class="desc"><%="#{user.reviews.length}"%> Points</div>
-</div>
 
-<% end %>
 
 
 <br>

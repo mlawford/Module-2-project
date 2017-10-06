@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # get '/restaurants/search', to: 'restaurants#index'
+
   resources :results, :restaurant_challenges, :challenges, :user_challenges,:restaurants,:reviews,:users
 
   get '/', to: 'application#welcome'
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   get '/review', to: 'reviews#new'
   post '/join_challenge', to: 'users#join_challenge'
   post '/logout', to: 'application#logout'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

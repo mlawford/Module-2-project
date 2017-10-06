@@ -7,8 +7,7 @@
 
 <%= form_for @review do |f|%>
 
-Restaurant: <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name%> <br>
-Content: <%= f.text_area :content %>
-<%= f.submit "Add Review" %>
+<div class="form-text">Restaurant:</div><%= f.collection_select :restaurant_id, Restaurant.all, :id, :name,class: 'form-group form-control'%> <br>
+<div class="form-text">Review:</div> <%= f.text_area :content,class: 'form-group form-control' %>
+<%= f.submit class:"btn btn-primary btn-lg"%>
 <% end %><br>
-<%= link_to "Back to Home", "/home" %>
