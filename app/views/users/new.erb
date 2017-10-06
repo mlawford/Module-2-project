@@ -1,10 +1,11 @@
 <% if @user.errors.any? %>
-<h2> Error: </h2>
-<% @user.errors.full_messages.each do |msg| %>
-<%= msg %>
-<%end%>
+  <div class="form-text" style="text-align:center";>Error:</div>
+  <% @user.errors.full_messages.each do |msg| %>
+    <%= msg %>
+  <%end%>
 <%end%>
 
+<<<<<<< HEAD
 <%= form_for @user do |f|%>
 Username: <%= f.text_field :name %><br>
 Email address: <%=f.text_field :email %><br>
@@ -14,3 +15,17 @@ Password: <%= f.password_field :password %><br>
 Confirm Password: <%= f.password_field :password_confirmation %>
 <%= f.submit "Sign Up" %>
 <% end %>
+=======
+<br>
+
+<div class="container-fluid form-class">
+  <%= form_for @user do |f|%>
+    <div class="form-text">Username: </div><%= f.text_field :name, class: 'form-group form-control' %><br>
+  <div class="form-text">Bio: </div> <%= f.text_area :bio, class: 'form-group form-control' %> <br>
+    <div class="form-text">Favorite Food: </div> <%= f.text_field :favorite_food, class: 'form-group form-control' %><br>
+    <div class="form-text">Password: </div> <%= f.password_field :password, class: 'form-group form-control' %><br>
+    <div class="form-text">Confirm Password: </div> <%= f.password_field :password_confirmation, class: 'form-group form-control' %>
+    <%= f.submit class:"btn btn-primary btn-lg"%>
+  <% end %>
+</div>
+>>>>>>> 4f3c266f689795ce74ae62637e92e0b6a723250a

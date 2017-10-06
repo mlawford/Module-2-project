@@ -1,3 +1,41 @@
-<h1> <%= @restaurant.name %> </h1>
-<p>Cuisine: <%= @restaurant.cuisine %> </p>
-<%= link_to "Back to Home","/home" %>
+
+<div class="gallery2">
+  <div class="profile-card">
+    <a target="_self" href="#>">
+      <img src="/knife.png" alt="Fjords" width="500" height="500">
+    </a>
+    <div class="desc"><%=@restaurant.name%></div>
+    <div class="desc">Cuisine: <%=@restaurant.cuisine%></div>
+  </div>
+</div>
+<% if @restaurant.reviews.first %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@restaurant.reviews.first.id %>">
+      <img src="/profile.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@restaurant.reviews.first.user.name%> Review</div>
+  </div>
+</div>
+<%end%>
+<% if @restaurant.reviews.second %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@restaurant.reviews.second.id %>">
+      <img src="/profile.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@restaurant.reviews.second.user.name%> Review</div>
+  </div>
+</div>
+<%end%>
+
+<% if @restaurant.reviews.third %>
+<div class="gallery3">
+  <div class="profile-card">
+    <a target="_self" href="/reviews/<%=@restaurant.reviews.third.id %>">
+      <img src="/profile.png" alt="Fjords" width="250" height="250">
+    </a>
+    <div class="desc"><%=@restaurant.reviews.third.user.name%> Review</div>
+  </div>
+</div>
+<%end%>

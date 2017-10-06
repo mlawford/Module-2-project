@@ -1,3 +1,250 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#grad1 {
+    height: 100px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("");
+    /* https://media.giphy.com/media/5XLPWTWfj7h6M/giphy.gif */
+     /*https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif*/
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #fcada7, #ffc963, #f64141, #96f3f6,#ffffff);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 20s ease infinite;
+	-moz-animation: Gradient 20s ease infinite;
+	animation: Gradient 20s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1,
+h6 {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	right: 0;
+	left: 0;
+}
+
+table, td, th {
+    border: 2px solid white;
+
+    text-align: left;
+    font-size: 32px;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 25%;
+}
+
+tr, td {
+    padding: 15px;
+
+}
+
+.form-brand {
+  color: #f4511e;
+
+}
+
+.form-class {
+  width: 50%;
+  border: none;
+  border-color: white;
+  border-radius: 4px
+}
+
+/* PROFILE CARD */
+
+div.gallery2 {
+    margin: 25px;
+    float: left;
+    width: 500px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+div.gallery2:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery2 img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc2 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+div.gallery3 {
+    margin: 25px;
+    float: left;
+    width: 250px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+div.gallery3:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery3 img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc3 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.newspaper {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    height: 60%;
+}
+
+.box{
+  position: relative;
+  font-size: 38px;
+  color:white;
+  border: 1px solid white;
+  -webkit-transition-duration: 0.9s; /* Safari */
+  transition-duration: 0.8s;
+}
+
+.box2{
+  position: relative;
+  font-size: 38px;
+  color:white;
+  border: 1px solid white;
+}
+
+.box2:hover{
+  background-color: rgba(255, 255, 255, .5);
+}
+div.gallery4 {
+    margin: 32px;
+    float: left;
+    width: 500px;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration: 0.8s;
+
+}
+
+div.gallery4:hover {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+div.gallery4 img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc4 {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.buttonHome {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: rgba(255, 255, 255, .0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button5 {
+    background-color: rgba(255, 255, 255, .0);
+    color: white;
+    border: 2px solid white;
+    float: middle;
+    width: 100%;
+}
+
+.button5:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: white;
+      float: middle;
+}

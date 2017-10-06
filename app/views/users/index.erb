@@ -1,0 +1,11 @@
+
+<% @users.each do |user| %>
+
+<div class="gallery animated fadeIn">
+  <a target="_self" href="/users/<%=user.id %>">
+    <img src="profile.png" alt="Fjords" width="300" height="200">
+  </a>
+  <div class="desc"><%="#{user.name}"%></div>
+</div>
+
+<% end %>

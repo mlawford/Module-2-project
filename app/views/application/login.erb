@@ -1,5 +1,7 @@
-<%= form_tag '/log_user_in' do %>
-  Username: <%= text_field_tag :name %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Login" %>
-<%end%>
+<div class="container-fluid">
+  <%= form_tag '/log_user_in' do %>
+     <div class="form-text">Username: </div><%= text_field_tag :name, nil, class: 'form-group form-control'%>
+     <div class="form-text">Password: </div><%= password_field_tag :password, nil, class: 'form-group form-control' %>
+    <%= submit_tag "Login" %>
+  <%end%>
+</div>
