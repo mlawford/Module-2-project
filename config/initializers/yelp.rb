@@ -1,3 +1,10 @@
+# Yelp.client.configure do |config|
+#   config.consumer_key = "ae8eRxf6Voa5YKiwQGs6Zg"
+#   config.consumer_secret = "krpAhVhTiLvjB27X69Svi4aZK4HWwDZDwPQ2Ochx0uBqq3izBWLQAkWuH47apRwM"
+#   config.token = "1h2knXebydlDbnxmw5cD0i1cf2w7k4WPYVZRehwwuV6-uCD2TpWJuoVQKbVdqkBP8v0C84ULAWfEIqDIZngfUU8OT2xrIjjFqobNBohaDdLKkJL2PrlapYzI3u3TWXYx"
+#   config.token_secret = "74f7db93489f794ea1ce904bbae3fc863eff91d59e9de63a7624c3c14259c9f6d1e41cf30096b7a737ca2954c1162ce72b1d02c875e199206c3678aea89c374f"
+# end
+
 require "json"
 # require "resolv"
 require "http"
