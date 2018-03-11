@@ -8,10 +8,7 @@ class Restaurant < ApplicationRecord
       @restaurants << restaurant["name"]
       @restaurants << restaurant["url"]
     end
-    #
-    # @restaurant_urls = search('restaurant','New York City')["businesses"].sample(5).map do |restaurant|
-    #     restaurant["url"]
-    # end
+  
 
       Restaurant.create({name:@restaurants[0],cuisine:"test",url:@restaurants[1]})
       Restaurant.create({name:@restaurants[2],cuisine:"test",url:@restaurants[3]})

@@ -24,26 +24,6 @@ class Challenge < ApplicationRecord
     Time.now > @challenge.end
   end
 
-  # def fetch_reviews
-  #   #fetches reviews and gives points to users
-  #   self.users.each do |user|
-  #     user.reviews.each do |review|
-  #       user.weekly_points += 1
-  #       user.save
-  #     end
-  #   end
-  # end
-  # def fetch_reviews
-  #   #fetches reviews and gives points to users
-  #   self.users.each do |user|
-  #     user.review.uniq{|review| review.restaurant_id}.each do |review|
-  #       if self.restaurants.include?(review.restaurant)
-  #       user.weekly_points += 1
-  #       user.save
-  #       end
-  #     end
-  #   end
-  # end
   def check_for_winner
     self.users.each do |user|
       if user.weekly_points >= 5
@@ -73,18 +53,6 @@ class Challenge < ApplicationRecord
 
 end
 
-
-  # def fetch_reviews
-  #   #fetches reviews and gives points to users
-  #   self.users.each do |user|
-  #
-  #     combined = (user.reviews.restaurants)+self.restaurants
-  #     combined - (a & b)
-  #     combined.length = value_to_add
-  #     user.weekly_points += value_to_add
-  #       user.save
-  #   end
-  # end
 
   def find_winner
     fetch_reviews.max_by do |user|
